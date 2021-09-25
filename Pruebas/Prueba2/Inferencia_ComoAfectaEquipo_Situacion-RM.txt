@@ -1,0 +1,34 @@
+Base de Conocimientos ComoAfectaEquipo inicializada:
+R1: arbMod --> ganaEST, FC=0.4
+R2: arbMod --> ganaRM, FC=0.75
+R3: publicoMayEST --> ganaRM, FC=-0.4
+R4: publicoEqui --> ganaEST, FC=-0.55
+R5: les2pivRM y visitanteRM --> ganaRM, FC=-0.1
+R6: les2pivEST --> ganaEST, FC=-0.6
+
+Base de Hechos Situacion-RM inicializada:
+les2pivRM, FC=1
+localEST, FC=1
+publicoEqui, FC=0.35
+visitanteRM, FC=1
+arbMod, FC=1
+publicoMayEST, FC=0.65
+les2pivEST, FC=1
+Meta: ganaRM
+
+Procedemos a verificar el hecho ganaRM
+|	Conjunto conflicto = {R2, R3, R5}
+|	Escogemos la regla R5: les2pivRM y visitanteRM --> ganaRM, FC=-0.1
+|	El hecho visitanteRM ya se encontraba en la base de hechos con una certeza de 1
+|	El hecho les2pivRM ya se encontraba en la base de hechos con una certeza de 1
+|	Inferencia CASO 1-b: Conjunción de antecedentes -- min{1, 1} = 1
+|	Inferencia CASO 3: Encadenamiento de evidencia -- -0.1 * max{0, 1} = -0.1
+|	Escogemos la regla R3: publicoMayEST --> ganaRM, FC=-0.4
+|	El hecho publicoMayEST ya se encontraba en la base de hechos con una certeza de 0.65
+|	Inferencia CASO 3: Encadenamiento de evidencia -- -0.4 * max{0, 0.65} = -0.26
+|	Inferencia CASO 2: Adquisición incremental de evidencia -- factores negativos: -0.1 + -0.26*(1 + -0.1) = -0.334
+|	Escogemos la regla R2: arbMod --> ganaRM, FC=0.75
+|	El hecho arbMod ya se encontraba en la base de hechos con una certeza de 1
+|	Inferencia CASO 3: Encadenamiento de evidencia -- 0.75 * max{0, 1} = 0.75
+|	Inferencia CASO 2: Adquisición incremental de evidencia -- (-0.334 + 0.75)/(1 - min{|-0.334|, |0.75|}) = 0.624625
+Concluimos ganaRM con una certeza de 0.624625

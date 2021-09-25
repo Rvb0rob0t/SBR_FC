@@ -1,0 +1,10 @@
+7
+Joven, FC=0.4
+Antig2-3, FC=1
+Antig3+, FC=-1
+Conduce2-3, FC=-1
+Conduce3+, FC=1
+Acompañado, FC=-1
+Alcohol, FC=0.5
+Objetivo
+Causante

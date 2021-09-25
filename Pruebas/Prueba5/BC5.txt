@@ -1,0 +1,5 @@
+4
+R1: Si Prob Entonces Satisfecho, FC=0.75
+R2: Si SSII y TDS y AOC y Geometría Entonces Satisfecho, FC=0.4
+R3: Si Motivado Entonces Prob, FC=0.7
+R4: Si DíasMalos2+ Entonces Prob, FC=-0.3

@@ -1,0 +1,8 @@
+7
+R1: Si Antig2-3 Entonces Exp, FC=0.5
+R2: Si Antig3+ Entonces Exp, FC=0.9
+R3: Si Conduce2-3 Entonces Cansado, FC=0.5
+R4: Si Conduce3+ Entonces Cansado, FC=1
+R5: Si Exp y Acompañado Entonces Causante, FC=-0.5
+R6: Si Cansado Entonces Causante, FC=0.5
+R7: Si Joven y Alcohol Entonces Causante, FC=0.7

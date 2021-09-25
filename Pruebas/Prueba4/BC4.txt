@@ -1,0 +1,4 @@
+3
+R1: Si Fiebre y Tos Entonces COVID, FC=0.5
+R2: Si Contacto Entonces COVID, FC=0.7
+R3: Si NoProtección y NoDistancia y Durac15+ Entonces Contacto, FC=1

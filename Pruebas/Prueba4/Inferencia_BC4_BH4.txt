@@ -1,0 +1,35 @@
+Base de Conocimientos BC4 inicializada:
+R1: Fiebre y Tos --> COVID, FC=0.5
+R2: Contacto --> COVID, FC=0.7
+R3: NoProtección y NoDistancia y Durac15+ --> Contacto, FC=1
+
+Base de Hechos BH4 inicializada:
+NoProtección, FC=1
+NoDistancia, FC=1
+Tos, FC=1
+Fiebre, FC=0.7
+Meta: COVID
+
+Procedemos a verificar el hecho COVID
+|	Conjunto conflicto = {R1, R2}
+|	Escogemos la regla R2: Contacto --> COVID, FC=0.7
+|	Procedemos a verificar el hecho Contacto
+|	|	Conjunto conflicto = {R3}
+|	|	Escogemos la regla R3: NoProtección y NoDistancia y Durac15+ --> Contacto, FC=1
+|	|	Procedemos a verificar el hecho Durac15+
+|	|	|	Conjunto conflicto = {}
+|	|	Concluimos Durac15+ con una certeza de 0
+|	|	El hecho NoDistancia ya se encontraba en la base de hechos con una certeza de 1
+|	|	Inferencia CASO 1-b: Conjunción de antecedentes -- min{0, 1} = 0
+|	|	El hecho NoProtección ya se encontraba en la base de hechos con una certeza de 1
+|	|	Inferencia CASO 1-b: Conjunción de antecedentes -- min{0, 1} = 0
+|	|	Inferencia CASO 3: Encadenamiento de evidencia -- 1 * max{0, 0} = 0
+|	Concluimos Contacto con una certeza de 0
+|	Inferencia CASO 3: Encadenamiento de evidencia -- 0.7 * max{0, 0} = 0
+|	Escogemos la regla R1: Fiebre y Tos --> COVID, FC=0.5
+|	El hecho Tos ya se encontraba en la base de hechos con una certeza de 1
+|	El hecho Fiebre ya se encontraba en la base de hechos con una certeza de 0.7
+|	Inferencia CASO 1-b: Conjunción de antecedentes -- min{1, 0.7} = 0.7
+|	Inferencia CASO 3: Encadenamiento de evidencia -- 0.5 * max{0, 0.7} = 0.35
+|	Inferencia CASO 2: Adquisición incremental de evidencia -- factores positivos: 0 + 0.35*(1 - 0) = 0.35
+Concluimos COVID con una certeza de 0.35

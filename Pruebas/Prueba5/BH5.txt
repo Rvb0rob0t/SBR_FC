@@ -1,0 +1,9 @@
+6
+TDS, FC=0.99
+AOC, FC=0.6
+SSII, FC=0.8
+Geometría, FC=0.65
+Motivado, FC=-0.5
+DíasMalos2+, FC=0.65
+Objetivo
+Satisfecho

@@ -1,0 +1,7 @@
+4
+Fiebre, FC=0.7
+Tos, FC=1
+NoDistancia, FC=1
+NoProtección, FC=1
+Objetivo
+COVID
